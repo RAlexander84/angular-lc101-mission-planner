@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrewComponent implements OnInit {
 
-  constructor() { }
+  crews : Crews[];
+
+  constructor() {
+    this.crews = [
+      {id:1, name:"Jessica Watkins"},
+      {id:2, name:"Raja Chari"},
+      {id:3, name:"Jasmin Moghbeli"}
+    ];
+  }
 
   ngOnInit() {
   }
+}
 
+interface Crews{
+  id: number;
+  name: string;
 }
